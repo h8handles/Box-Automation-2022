@@ -17,7 +17,7 @@ mkdir htb;mkdir tryhackme; mkdir web; mkdir /opt/web;
 # create opt structure for tools web for uploads  wordlists
 
 echo -e "\e[92mInstalling Terminal Environment ....\e[0m"
-sudo apt install git terminator
+sudo apt install git xclip terminator -y
 
 # install zsh/oh-my-zsh
 
