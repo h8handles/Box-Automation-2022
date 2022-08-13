@@ -8,8 +8,10 @@
 #
 echo -e "\e[92mSetting up directory structure ....\e[0m"
 cd ~/Desktop/
-sudo chown  $USER /opt/
-mkdir htb;mkdir tryhackme; mkdir web; mkdir /opt/web;
+sudo chown  $USER /opt/*
+
+
+mkdir htb;mkdir tryhackme; mkdir web;
 # web should mirror opt web folder
 
 # make desktop folders for CTF platforms
@@ -34,8 +36,11 @@ sudo apt-get install neo4j
 sudo systemctl stop neo4j
 cd /usr/bin
 ./neo4j console
-cd ~/opt
+cd ~/Downloads
 wget https://github.com/BloodHoundAD/BloodHound/releases/download/4.2.0/BloodHound-linux-arm64.zip
+cp BloodHound-linux-arm64.zip /opt
+
+cd /opt
 unzip BloodHound-linux-arm64.zip
 
 echo -e "\e[92mMAKE SURE TO CHANGE CREDS FOR NEO4J!!!! ....\e[0m"
