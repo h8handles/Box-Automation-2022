@@ -11,7 +11,7 @@ cd ~/Desktop/
 sudo chown  "$USER" /opt/
 
 
-mkdir htb;mkdir tryhackme; mkdir web;
+mkdir htb;mkdir tryhackme; mkdir web;mkdir /opt/web
 # web should mirror opt web folder
 
 # make desktop folders for CTF platforms
