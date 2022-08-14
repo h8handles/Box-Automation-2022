@@ -19,25 +19,24 @@ mkdir htb;mkdir tryhackme; mkdir web;
 # create opt structure for tools web for uploads  wordlists
 
 echo -e "\e[92mInstalling Terminal Environment ....\e[0m"
-sudo apt install git python3-pip virtualenv xclip terminator -y
+sudo apt install git python3-pip virtualenv xclip terminator -y -q
 
 # install zsh/oh-my-zsh
 
 echo -e "\e[92mSetting up Bloodhound ....\e[0m"
 
-wget -O - https://debian.neo4j.com/neotechnology.gpg.key | sudo apt-key add -
+wget --no-verbose -O - https://debian.neo4j.com/neotechnology.gpg.key | sudo apt-key add -
 
 echo 'deb https://debian.neo4j.com/ stable 4.4' | sudo tee -a /etc/apt/sources.list.d/neo4j.list
 
-sudo apt-get update
-sudo apt install neo4j
+sudo apt-get update --quiet
+sudo apt install neo4j -y --quiet
 
 cd /opt/
 
-wget https://github.com/BloodHoundAD/BloodHound/releases/download/4.2.0/BloodHound-linux-x64.zip
+wget --no-verbose https://github.com/BloodHoundAD/BloodHound/releases/download/4.2.0/BloodHound-linux-x64.zip
 
 unzip BloodHound-linux-x64.zip
 
 
-echo "\e[92mMAKE SURE TO CHANGE CREDS FOR NEO4J!!!! ....\e[0m"
 
