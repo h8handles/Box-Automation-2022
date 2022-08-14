@@ -21,8 +21,12 @@ mkdir htb;mkdir tryhackme; mkdir web;mkdir /opt/web
 echo -e "\e[92mInstalling Terminal Environment ....\e[0m"
 sudo apt install git python3-pip virtualenv xclip terminator -y -q
 
-# install zsh/oh-my-zsh
+#NEED TODO install zsh/oh-my-zsh
 
+
+
+
+# neo4j install and bloodhound
 echo -e "\e[92mSetting up Bloodhound ....\e[0m"
 
 wget --no-verbose -O - https://debian.neo4j.com/neotechnology.gpg.key | sudo apt-key add -
@@ -46,6 +50,8 @@ wget --no-verbose https://download.sublimetext.com/sublime-text_build-3211_amd64
 
 sudo dpkg -i sublime-text_build-3211_amd64.deb
 
+
+#Start of web-upload folder 
 echo -e "\e[92mSetting up web folder for uploads ....\e[0m"
 
 cd ~/Desktop/web
@@ -64,7 +70,37 @@ echo -e "\e[92m Digging up some Juicy Potatoes ! ....\e[0m"
 cd ../win-binaries
 wget --no-verbose https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotato.exe
 wget --no-verbose https://raw.githubusercontent.com/calebstewart/CVE-2021-1675/main/CVE-2021-1675.ps1
+mv CVE-2021-1675.ps1 PrintNightmare.ps1
 cd /opt
 git clone https://github.com/samratashok/nishang.git
 cd ~/Desktop/web
+
+
+# OPT virtual environment tools
+
+cd /opt/
+
+git clone https://github.com/Porchetta-Industries/CrackMapExec.git
+cd CrackMapExec
+virtualenv .
+source bin/activate
+pip3 install .
+deactivate
+cd ..
+git clone https://github.com/SecureAuthCorp/impacket.git
+cd impacket
+virtualenv .
+source bin/activate
+pip3 install .
+deactivate
+cd ..
+git clone https://github.com/lgandx/Responder.git
+cd Responder
+virtualenv .
+source bin/activate
+
+pip3 install -r requirements.txt
+deactivate
+
+
 
