@@ -39,4 +39,9 @@ wget --no-verbose https://github.com/BloodHoundAD/BloodHound/releases/download/4
 unzip BloodHound-linux-x64.zip
 
 
+echo -e "\e[92mInstalling Sublime Text ....\e[0m"
 
+cd ~/Downloads
+wget --no-verbose https://download.sublimetext.com/sublime-text_build-3211_amd64.deb
+
+sudo dpkg -i sublime-text_build-3211_amd64.deb
