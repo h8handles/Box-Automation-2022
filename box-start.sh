@@ -8,7 +8,7 @@
 #
 echo -e "\e[92mSetting up directory structure ....\e[0m"
 cd ~/Desktop/
-sudo chown  $USER /opt/*
+sudo chown  "$USER" /opt/
 
 
 mkdir htb;mkdir tryhackme; mkdir web;
