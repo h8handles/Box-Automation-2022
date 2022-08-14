@@ -45,3 +45,18 @@ cd ~/Downloads
 wget --no-verbose https://download.sublimetext.com/sublime-text_build-3211_amd64.deb
 
 sudo dpkg -i sublime-text_build-3211_amd64.deb
+
+echo -e "\e[92mSetting up web folder for uploads ....\e[0m"
+
+cd ~/Desktop/web
+
+cp /opt/BloodHound-linux-x64/resources/app/Collectors/SharpHound.exe .
+cp /opt/BloodHound-linux-x64/resources/app/Collectors/SharpHound.ps1 .
+wget --no-verbose https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Recon/PowerView.ps1
+wget --no-verbose https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/PowerUp.ps1
+wget --no-verbose https://raw.githubusercontent.com/Kevin-Robertson/Powermad/master/Powermad.ps1
+
+echo -e "\e[92m Digging up some Juicy Potatoes ! ....\e[0m"
+
+wget --no-verbose https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotato.exe
+wget --no-verbose https://raw.githubusercontent.com/calebstewart/CVE-2021-1675/main/CVE-2021-1675.ps1
