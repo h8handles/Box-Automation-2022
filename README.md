@@ -1,9 +1,9 @@
 # Box-Automation-2022
-------------------------------------------------------------------------------------------------------------------------------
+
 This project is really just a personal script to set up my vm in a pinch
 This is used primarily for ubuntu feel free to clone and modify for your distro
 
-------------------------------------------------------------------------------------------------------------------------------
+
 
 ## Primary Functionality 
 
